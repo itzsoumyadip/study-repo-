@@ -1,0 +1,41 @@
+
+ body{  
+   background-color: #ccff33;
+  
+ }
+
+
+h2 {
+    color:#0000cc;
+    font: size 80px;
+    font-weight: bold;
+    
+} 
+ div p {
+     color:#660066;
+     }
+
+
+
+div {
+   
+/* border: 5px solid red;
+     background-color: #ffccf2;      
+*/
+width: 500px ;
+height: 300px;
+border: 1px solid red;
+
+/*-webkit-animation: mymove 10s infinite; */
+animation: mymove 3s infinite;
+    }
+
+    @-webkit-keyframes mymove {
+        50% {border-width: 15px;}
+    } 
+ /*   
+    @keyframes mymove {
+        50% {border-width: 15px;}
+    }
+    
+    */
