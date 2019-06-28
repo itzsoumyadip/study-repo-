@@ -23,10 +23,10 @@
 
 //  student grade 
 
-let  marks = 7
+let  marks = 10
 
 
-   if ( marks >9) {
+   if ( marks >=9) {
           console.log('very good ')
       }else if (marks <9 & marks >5){
             console.log('good')

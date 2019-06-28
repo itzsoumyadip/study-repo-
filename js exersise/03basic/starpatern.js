@@ -17,18 +17,20 @@ for (var i = 1;i<=5; i++) {
    console.log(str);}
 
 */
-   let j,i;
+   let j=0,i=0;
+    var str;
 
 
     for(i=1;i<=10;i++){
         
     for(j=1;j<=10;j++)
-
+{
      if (j>=11-i)
-        var  str ="";
+          str =" ";
     else
-        var str  += "*";
+         str = + "*";
 
     console.log(str);
     }
          
+    }

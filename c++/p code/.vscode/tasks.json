@@ -6,7 +6,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "g++ -g main.cpp -o main",
+            "command": "g++ -g tCarcter.cpp -o tCarcter",
             "group": {
                 "kind": "build",
                 "isDefault": true

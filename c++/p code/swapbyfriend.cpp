@@ -2,7 +2,7 @@
  .. and  ... if u do not want to write "std"  then use this line 
  "  #include <iostream.h> insted of #include<iostream>" .....
  learn then write */
-z
+
 
 #include<iostream>
 
