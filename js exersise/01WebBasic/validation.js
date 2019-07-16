@@ -1,7 +1,7 @@
 // function FromValidation(){
-// const gotvalue = document.getElementById('myform').value
+// const gotvalue = document.getElementById('myform').value // it retutning the value 
 
-// if(isNaN(gotvalue)|| gotvalue <1 || gotvalue >20)
+// if(isNaN(gotvalue)|| gotvalue <1 || gotvalue >20)           ///isNaN() check whether given value is number or not 
 // {
 //     console.log('sorry try Again');
 //     const cha=document.querySelector('#ch')
@@ -34,7 +34,6 @@ document.querySelector(".myNform").addEventListener('submit',(event) => {
         console.log('!!!retry')
     }
 })
-
 
 
 

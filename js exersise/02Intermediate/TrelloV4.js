@@ -29,7 +29,7 @@ console.log(index)
 
       
 //    }) 
-//    return anyTodo[indexs]
+//    return anyTodo[indexs]  // return the value that is store in indexs
 
 //   }
 // const print = myToDos(newToDos,'Record Youtube Videos')

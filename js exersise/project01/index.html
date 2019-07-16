@@ -1,0 +1,35 @@
+<!----BY _SOUMYADIP 
+FOLLOW ME ON INSTAGRAM AN IN TWITER  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel ="stylesheet" href="style.css">
+    <title> Sample todo application</title>
+</head>
+<body>
+   <div id="container">
+       <div class="controls">
+         <h1 id="nw" onmouseover="effect()"  onmouseout="back()" > MY  Todo</h1>
+         <input type="text"  id="input" onclick="inputRemove()"><br>  <!-- todo USER input area -->
+         <button type="button" id="add">Add Todo </button>
+         <button type="button" id="remove">Remove </button>
+       </div>
+       <ul id="list">
+           <li class="mycheck"><input type="checkbox" id="check"><label>Go to gym</label> </li>
+           <li class="mycheck"><input type="checkbox" id="check" ><label>Javascript ToDo project </label></li>
+           <li class="mycheck"><input type="checkbox" id="check" checked ><label>Buy Bread </label></li>
+
+        </ul> 
+
+   </div> 
+    
+
+   <script src ="Todo.js"> </script> 
+</body>
+</html>
