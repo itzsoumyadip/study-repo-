@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>add</title>
+</head>
+
+<body>
+<form t>
+    <input type="text" id="one"> </input>
+    <input type="text" id="two"> </input>
+    <button type="submit" onclick="fun()"> submit</button>
+    <button type="submit" onclick="resett()">reset</button>
+</form>
+    <script>
+        //var c = 23
+
+        function fun() {
+            let i = document.getElementById("one").value
+            let j = document.getElementById("two").value
+            const newpara = document.createElement('input')
+                         
+                const a =  Number(i) + Number(j)
+                newpara.value = a
+                document.querySelector('body').appendChild(newpara)
+            
+
+            //     newpara.textContent = 'try'
+            //     document.querySelector('body').appendChild(newpara)
+            // }
+        }
+
+ const resett =function(){
+        const re = document.querySelectorAll('input')
+         re.forEach(function(p) { return p.value=" "})
+   }
+
+
+    </script>
+</body>
+
+</html>

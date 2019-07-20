@@ -6,7 +6,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "g++ -g tCarcter.cpp -o tCarcter",
+            "command": "g++ -g weddingwithclss.cpp -o weddingwithclss",
             "group": {
                 "kind": "build",
                 "isDefault": true
