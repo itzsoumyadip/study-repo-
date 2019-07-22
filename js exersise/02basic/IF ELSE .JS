@@ -23,7 +23,7 @@
 
 //  student grade 
 
-let  marks = 10
+let  marks = 8
 
 
    if ( marks >=9) {
