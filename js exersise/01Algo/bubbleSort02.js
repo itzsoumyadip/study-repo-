@@ -1,4 +1,4 @@
-/// bubble sort   more  favourable for functional programming
+/// bubble Sort  more  favourable for functional programming
 
 //let arr =[30,40,20,10,65,56]
 let arr =[90,20,356,65,45,3,5,6,123331,87]
