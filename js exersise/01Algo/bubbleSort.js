@@ -18,11 +18,15 @@ function bubble_sort(arr) {
     if (flag === 0) {
       console.log('total no of round' + ' ' + round)
       return arr;
-    }
+      }
+  
   }
   //console.log(arr +" "+ arr.length)
   return arr
 
 }
 
-console.log(bubble_sort([90,20,356,65,45,3,5,6,123331,87]))
+//console.log(bubble_sort([9,11,24,36,48,59,65,79,88]))
+//console.log(bubble_sort([99,81,74,66,58,49,35,29,8]))
+//console.log(bubble_sort([30,40,20,10,65]))
+//console.log(bubble_sort([34,15,29,8]));

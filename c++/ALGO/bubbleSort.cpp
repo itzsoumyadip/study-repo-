@@ -3,7 +3,7 @@
 #include<conio.h>
 
 using namespace std;
-int bubble_sort(int[], int);
+void bubble_sort(int[], int);
 
 
 
@@ -35,7 +35,7 @@ int main() {
 ///DEFINATION
 
 
-int bubble_sort(int a[], int len) {
+void bubble_sort(int a[], int len) {
   int flag;
   for (int round = 1; round <= len - 1; round++) { /// one round is less need for get the result in bubble sort because after one round last index of an array will be sorted and that does not need to be sorted farther
     int flag = 0;
@@ -57,11 +57,11 @@ int bubble_sort(int a[], int len) {
     }
     if (flag == 0) {
       cout << "Total no of round is " << round << endl;
-      return 0;
+      return ;
 
     }
 
 
   }
-  return 0;
+  // return 0;
 }

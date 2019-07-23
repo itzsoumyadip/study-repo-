@@ -11,7 +11,6 @@ function swap(arr,index1,index2){
           
         }
 
-
 function bubble_sort(arr) {
 
     let round;
