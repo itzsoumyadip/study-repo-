@@ -1,0 +1,6 @@
+-- Links to the PHP 3.0 Name Change --------------
+http://marc.info/?t=90279157600002&r=1&w=4
+
+
+-- Voting Results -------------------------------
+http://web.archive.org/web/20000815063125/http://il.php.net/vote_listing.php3
