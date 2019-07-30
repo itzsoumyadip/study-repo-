@@ -1,12 +1,10 @@
-let king = 78
-let c =73
 
-if (king> 20){
+var c = 34
 
-   king ++
+do {
 
-    console.log(c++);
-   
-}
-console.log(king);
+
+  c ++
 console.log(c);
+
+}while(c<100)

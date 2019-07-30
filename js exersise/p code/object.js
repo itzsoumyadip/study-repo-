@@ -4,7 +4,7 @@
 
 
 
-var o = new Object()
+var o = new Object()         
 o.firstName = " iama_coder"
 o.lastName = "soudip"
 o.student = true

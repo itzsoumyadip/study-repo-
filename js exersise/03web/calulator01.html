@@ -12,8 +12,8 @@
 <form t>
     <input type="text" id="one"> </input>
     <input type="text" id="two"> </input>   
-    <button type="submit" onclick="fun()"> submit</button>
-    <button type="submit" onclick="resett()">reset</button>
+    <button type="button" onclick="fun()"> submit</button>
+    <button type="button" onclick="resett()">reset</button>
 </form>
     <script>
         //var c = 23
@@ -32,9 +32,9 @@
             //     document.querySelector('body').appendChild(newpara)
             // }
         }
-
+ 
  const resett =function(){
-        const re = document.querySelectorAll('input')
+        const re = document.querySelector('input')
          re.forEach(function(p) { return p.value=" "})
    }
 
