@@ -27,6 +27,6 @@ function bubble_sort(arr) {
 }
 
 //console.log(bubble_sort([9,11,24,36,48,59,65,79,88]))
-//console.log(bubble_sort([99,81,74,66,58,49,35,29,8]))
+console.log(bubble_sort([99,81,74,66,58,49,35,29,8]))
 //console.log(bubble_sort([30,40,20,10,65]))
 //console.log(bubble_sort([34,15,29,8]));
