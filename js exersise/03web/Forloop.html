@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math table</title>
+
+    <style>
+        body {
+            display: grid;
+            grid-column-gap:20px;
+            background-color: green;
+        }
+
+        [type="submit"] {
+            background-color: brown;
+            color: thistle;
+
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <h1 style="color:red">Enter the Number to see its corresponding table</h1>
+    <input type="text" id="NUM" placeholder="Enter number">
+    <input type="submit" onclick="mul()" />
+
+
+</body>
+<script>
+    var mul = () => {
+
+        var x = document.getElementById("NUM").value
+        var i = 1
+        for (; i <= 10; i++)
+            document.write("<p>" + x + "x" + i + "=" + (Number(x) * i) + "</p>")
+
+
+    }
+</script>
+
+
+</html>
