@@ -34,7 +34,7 @@ let partition = (arr, beg, end) =>  {
 
 }
 
-let quick_sort= (a, beg, end) => {
+const quick_sort= (a, beg, end) => {
     let loc;
     if (beg < end) {
         loc = partition(a, beg, end);

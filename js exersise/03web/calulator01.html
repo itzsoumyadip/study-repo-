@@ -1,48 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>add</title>
+    <style>
+        [type="number"] {
+              
+              background-color:yellow;     
+        }
+         [type="text"] {
+              
+              background-color:pink;       
+    
+         }    
+        
+    
+       div{
+        
+    background-color: springgreen;
+    margin:20px;
+    padding:20px;
+    width:200px;
+    height:200px ;
+    display:grid ;
+  
+       }
+    button{
+        cursor: pointer;
+        color:red;
+    }
+
+
+    </style>
+     
+    
 </head>
 
 <body>
-<form t>
-    <input type="text" id="one"> </input>
-    <input type="text" id="two"> </input>   
-    <button type="button" onclick="fun()"> submit</button>
-    <button type="button" onclick="resett()">reset</button>
-</form>
+       
+    <form >
+          <center>  <div>
+        <input type="number" id="one"> </input>
+        <input type="number" id="two"> </input>
+        <button type="button" onclick="fun()"> calculate</button>
+        <button type="button" onclick="resett()">reset</button>
+    </div></center>
+    </form>
+
     <script>
         //var c = 23
 
         function fun() {
+    
+            const re = document.querySelectorAll("#new")
+
+re.forEach(function (p) {
+    return p.remove(p)
+})
+
+
+    ///remove part end
+
+
+
+
+
             let i = document.getElementById("one").value
             let j = document.getElementById("two").value
-            const newpara = document.createElement('input')   
-            newpara.setAttribute('id', 'new')    
-                const a =  Number(i) + Number(j)
-                newpara.value = a
-               
-                document.querySelector('body').appendChild(newpara)
-                
-            
+            const newpara = document.createElement('input')
+            newpara.setAttribute('id', 'new')
+            const a = Number(i) + Number(j)
+            newpara.value = a
+
+            document.querySelector('body').appendChild(newpara)
+
+
 
             //     newpara.textContent = 'try'
             //     document.querySelector('body').appendChild(newpara)
             // }
         }
- 
- const resett =function(){
-        const re = document.querySelectorAll("#new")
-             
-        re.forEach(function(p) { return p.remove(p)})   // if code was ( p.value = " " ) it will only remove text ,,   and if p.remove it will remove new created text area;
-   }
 
+        const resett = function () {
+            const re = document.querySelectorAll("#new")
 
+            re.forEach(function (p) {
+                return p.remove(p)
+            }) // if code was ( p.value = " " ) it will only remove text ,,   and if p.remove it will remove new created text area;
+        }
     </script>
+
+
+
 </body>
 
 </html>
