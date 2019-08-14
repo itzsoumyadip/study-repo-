@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Radio button</title>
+</head>
+
+<body>
+
+
+
+    <input id="rd1" name="gr1" type="radio" value="EMAIL" >EMAIL
+    <input id="rd2" name="gr1" type="radio" value="phone">phone
+    <button onclick="buttonClicked()">Submit</button>
+</body>
+<script>
+    function buttonClicked() {
+
+        var rd1 = document.getElementById("rd1")
+        var rd2 = document.getElementById("rd2")
+          alert(rd1 +" and "+ rd2)   //// if  i take  var rd1 = document.getElementById("rd1").value i can not perform this condition  =>>  if (rd1.checked == true)<<=  my conclution if (.value) is used then the real value is going to assign with it and so it ommiting the checked attribute
+         if (rd1.checked == true)
+           
+            alert("you have slected " + rd1.value)
+        else if (rd2.checked == true)
+            alert("you have selected " + rd2.value)
+        else 
+        alert("please select some contact details")
+    }
+</script>
+
+</html>
