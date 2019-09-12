@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drop Down</title>
+<style>   
+    button:hover{
+        background-color: orange;       
+       cursor:pointer;
+      }
+   
+
+
+</style>
+</head>
+
+<body>
+
+
+<select id="select">
+       <option value="EMAIL" >EMAIL</option>
+       <option  value="phone">phone</option>
+       <option  value="Whats app ">Whatsapp</option>
+         
+</select>
+   
+    <button onclick="buttonClicked()">Submit</button>
+</body>
+
+<script>
+    function buttonClicked() {
+
+        var select = document.getElementById("select")
+          alert(select.options[select.selectedIndex].value)
+        
+    }
+</script>
+
+</html>
