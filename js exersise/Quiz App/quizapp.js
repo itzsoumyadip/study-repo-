@@ -20,11 +20,14 @@ let correct = 0;
  
 document.addEventListener("DOMContentLoaded", () => {
     load_question();
-     let button=document.createElement("button");
-        button.textContent= Next;
-      let hw =document.getElementById("bottom")
-         hw.innerHTML=sala;    
-     //bottom.innerHTML="<button>NEXT"   
+   
+      
+            
+        //  let buttons=document.createElement("button");
+        //  buttons.textContent="next";
+        let buttons = document.querySelector("#bottom") 
+          
+         buttons.innerHTML="<button>NEXT"   
 });
  
 function load_question() {
