@@ -1,8 +1,10 @@
-.bar {
-    height:20px;
-    background-color:red;; 
+.cols{
+   border:3px solid red;
+    /* background-color:blue; */
+    
 }
-.bar1 {
-    height:20px;
-    background-color:gray; 
+.cner{
+    border:3px dashed;
+    height:500px;
+    border-radius:4.5px;  
 }
