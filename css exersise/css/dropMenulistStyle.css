@@ -1,0 +1,76 @@
+.sticky{
+    padding-bottom:150px; 
+   
+}
+.bo{
+   padding-top:1000px; 
+}
+
+*{
+    padding:0;
+    margin: 0;
+   box-sizing:border-box;
+}
+body{
+    background-color: bisque;
+    font-family: sans-serif;
+}
+
+.menu-bar{
+    background-color: rgb(0,100,0);
+    text-align:center;
+     position:sticky;
+      top:0;  
+}
+.menu-bar ul{
+    display: inline-flex;
+     color:#fff;
+     list-style-type:none; 
+}
+.menu-bar ul li{
+       width:120px;
+       margin:15px;
+       padding:15px;   
+   //  background-color:red;
+    }
+.menu-bar ul li  a{
+    text-decoration:none;
+    color:white;
+}   
+.active , .menu-bar ul li:hover{
+    background-color:lightgreen;
+    border-radius:3px;
+}
+
+.menu-bar ul li .fa{
+     margin-right:8px;
+}
+.sub-menu-1{
+    display:none; 
+}
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    margin-top:15px;
+    margin-left:-15px;
+    background-color:green;
+  
+} 
+.menu-bar ul li:hover .sub-menu-1 ul{
+     display: block;
+     margin-top:20px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    background-color:rgba(200,180,190,0.52); 
+    width: 150px;
+    padding-left:15px;
+   // text-align:left;
+ 
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:hover {
+    background-color:rgba(66, 248, 21, 0.904);
+    box-shadow:3px 3px 10px 1px rgba(66, 248, 21, 0.904),3px 3px 15px #fff;
+    height:50px;
+    border-radius:4px; 
+}
+
