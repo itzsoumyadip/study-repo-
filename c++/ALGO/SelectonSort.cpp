@@ -17,7 +17,7 @@ int temp,LOC,K;
         a[K]=a[LOC];
         a[LOC]=temp;
    }
-   for(K=0;K<=Klen;K++)
+   for(K=0;K<Klen;K++)
      cout<<a[K]<<"  ";
 
     getch();
