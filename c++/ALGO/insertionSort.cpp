@@ -6,8 +6,8 @@ using namespace std;
 
 void insertionShort(int A[],int N)
 {
-            int j;
-        for(int i=1;i<N;i++){             // checks from index 1 ,
+            int j; // j will be initialized by previously index number( as 1st step i will hold  index of second number) of the array 
+        for(int i=1;i<N;i++){             // checks from index 1 , 
             int temp = A[i];  // value of i'th ,index is stored in 'temp' for sorting
             for(j=i-1;j>=0 && temp<A[j];j--){ /* loop only work if value weight  of (temp)i'th position is less then value weight of j position}
 // j=i-1 previous block of i in array 'A' .// and  j= j-1, it checks value from previous block of index i to index 0 , and also if temp(really i'th index value ) value weight  is less then j'th index value */
