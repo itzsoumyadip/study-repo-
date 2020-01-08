@@ -7,7 +7,7 @@ let temp,LOC,K;
         a[K]=a[LOC];
         a[LOC]=temp;
    }
-   for(K=0;K<=9;K++)
+   for(K=0;K<K.length;K++)
  {    console.log(a[K])
 }
 
