@@ -12,3 +12,5 @@ print(tup.count(21))   #return the number of occuerence of the value
 
 print(tup.index(14))  # find the index number of the value 
 # 2          
+
+###  tup[1]=2     # TypeError: 'tuple' object does not support item assignment
