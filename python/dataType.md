@@ -18,8 +18,9 @@
          * **complex**
          * **bool**
       * __Example__
-          1. *int*:-```python
+          1. *int*:-
+          ```python
                                 num=5
                                 type(num)
                                 #<class 'int'>
-                ```   
+              ```   
