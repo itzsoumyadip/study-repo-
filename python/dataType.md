@@ -10,5 +10,5 @@
 
 
  * 
-   1. **NONE** :-   When a varible is not assigned to any value then its known as **None**. * In other   language (Like c c++) we use keyword Null but in python we use **NONE**. *
+   1. **NONE** :-   When a varible is not assigned to any value then its known as **None**. *In other   language (Like c c++) we use keyword Null but in python we use **NONE**.*
    2.  
