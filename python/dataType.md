@@ -20,24 +20,23 @@
          * **bool**
       * __Example__
           1. *int*:-
-                  ```python
-                                num=5
-                                type(num)
-                                #<class 'int'>
-                   ```   
+               ```python
+                    num=5
+                    type(num)
+                   #<class 'int'>
+               ```   
           2. *float*:-
-                   ```python  
-                              num=2.5
-                              type(num)
-                              #<class 'float'>
+               ```python  
+                    num=2.5
+                    type(num)
+                    #<class 'float'>
               ``` 
            3. *complex*:-
-                   ```python
-                               num=6+9j # a+bj ,j = square root of -1
-                               type(num)
-                               #<class 'complex'>
-                
-                  ```         
+                ```python
+                    num=6+9j # a+bj ,j = square root of -1
+                    type(num)
+                    #<class 'complex'>
+                ```         
            4. *bool*
                  ```python
                          a=True
@@ -61,13 +60,12 @@
                                print(b) #5.0
                      ```                   
                  * *normal to complex*
-                       ```python 
+                      ```python 
                                a =5
                                b=9
                                c= complex(a,b) #convert normal  type to complex type   
                                type(c)  #<class 'complex'>
                                print(c) #5+9j
-                   
                       ```
                  *  *bool to int*   
                     ```python
