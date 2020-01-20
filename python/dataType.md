@@ -33,17 +33,17 @@
                    ``` 
            3. *complex*:-
                    ```python
-                               num=6+9j # a+bj ,j = sqrroot of -1
+                               num=6+9j # a+bj ,j = square root of -1
                                type(num)
                                #<class 'complex'>
                    ```         
            4. *bool*
-                   ```python
+                 ```python
                          a=True
                          b=False
                          type(a) #<class'bool'>             
                               
-                  ```       
+                 ```       
            5. *type conversion* 
                 * *float to int* 
                 ```python 
@@ -59,14 +59,14 @@
                                type(b)  #<class 'float'>
                                print(b) #5.0
                      ```                   
-                  *  *normal to complex*
-                          ```python 
+                 * *normal to complex*
+                       ```python 
                                a =5
                                b=9
                                c= complex(a,b) #convert normal  type to complex type   
                                type(c)  #<class 'complex'>
                                print(c) #5+9j
-                           ```
+                       ```
                  *  *bool to int*   
                     ```python
                          a= int(True)
