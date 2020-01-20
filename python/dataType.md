@@ -44,7 +44,7 @@
                          type(a) #<class'bool'>             
                               
                  ```       
-           5. *type conversion* 
+           5. **Type Conversion** 
                 * *float to int* 
                 ```python 
                                a =5.6
