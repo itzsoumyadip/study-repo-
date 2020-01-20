@@ -44,7 +44,7 @@
                          type(a) #<class'bool'>             
                               
                   ```       
-           5. **type conversion* 
+           5. *type conversion* 
                 * *float to int* 
                 ```python 
                                a =5.6
@@ -58,15 +58,15 @@
                                b= float(a) #convert any data type to float type  
                                type(b)  #<class 'float'>
                                print(b) #5.0
-                    ```                   
-                  * *normal to complex*
+                     ```                   
+                  *  *normal to complex*
                           ```python 
                                a =5
                                b=9
                                c= complex(a,b) #convert normal  type to complex type   
                                type(c)  #<class 'complex'>
                                print(c) #5+9j
-                    ```
+                           ```
                  *  *bool to int*   
                     ```python
                          a= int(True)
@@ -76,7 +76,7 @@
                          print(b) # 0            
                               
                     ```
-   3. **list**
+  3. **list**
         ```python
         list=[25,36,45,12]
         type(list) #<class 'list'>             
@@ -99,15 +99,15 @@
   7. **RANGE**:- for  iteration in value  
        ```python
          range(10) # range(0,10)
-         # **** for printing range we nee to convert range  to others  *** #
+         # **** for printing range we need to convert range  to others  *** #
          list(range(10)) #[0,1,2,3,4,5,6,7,8,9]
          # ** use range's  3rd parameter   ,it determine how to iterate or how many steps to jump for second number *** #
         list(range(2,10,2)) #[2,4,6,8] 
       ```    
   8. **Dictionary  (map)** 
-          ```python
+       ```python
              a =  {'rahul':'samsung', 'kiran':'Iphone','Dev': 'Oneplus'}
-           print(a.keys())
+            print(a.keys())
             # dict_keys(['rahul', 'kiran', 'Dev'])
             print(a.values())  
             # dict_values(['samsung', 'Iphone', 'Oneplus'])
@@ -116,5 +116,4 @@
             #samsung
             print(a.get('kiran'))
             #Iphone
-
-   ```     
+      ```     
