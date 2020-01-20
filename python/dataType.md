@@ -24,15 +24,13 @@
                                 num=5
                                 type(num)
                                 #<class 'int'>
-                
-                  ```   
+                   ```   
           2. *float*:-
                    ```python  
                               num=2.5
                               type(num)
                               #<class 'float'>
-                
-                  ``` 
+              ``` 
            3. *complex*:-
                    ```python
                                num=6+9j # a+bj ,j = square root of -1
