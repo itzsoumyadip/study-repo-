@@ -10,7 +10,7 @@
 
 
  * 
-   1. **NONE** :-   When a varible is not assigned to any value then its known as **None**. *In other   language (Like c c++) we use keyword Null but in python we use **NONE**.*
+   1. **NONE** :-   When a varible is not assigned to any value then its known as **None**. *In other              language (Like c c++) we use keyword Null but in python we use **NONE**.*
    
    2. **Numeric Type**
       * TYPES
@@ -76,27 +76,28 @@
                          print(b) # 0            
                               
                     ```
-  3. **list**
+  
+   3. **list**
         ```python
         list=[25,36,45,12]
         type(list) #<class 'list'>             
         ```
-  4. **Set**
+   4. **Set**
         ```python
         set={25,36,45,12}
         type(set) #<class 'set'>             
         ```           
-  5. **Tuple**
+   5. **Tuple**
       ```python
       tupl=(25,36,45,12)
       type(typle) #<class 'tuple'>             
       ``` 
-  6. **String**
+   6. **String**
       ```python
       str="saha"
       type(str) #<class 'str'>             
       ```                   
-  7. **RANGE**:- for  iteration in value  
+   7. **RANGE**:- for  iteration in value  
        ```python
          range(10) # range(0,10)
          # **** for printing range we need to convert range  to others  *** #
@@ -104,7 +105,7 @@
          # ** use range's  3rd parameter   ,it determine how to iterate or how many steps to jump for second number *** #
         list(range(2,10,2)) #[2,4,6,8] 
       ```    
-  8. **Dictionary  (map)** 
+   8. **Dictionary  (map)** 
        ```python
              a =  {'rahul':'samsung', 'kiran':'Iphone','Dev': 'Oneplus'}
             print(a.keys())
