@@ -10,7 +10,7 @@
 add(5,4)   # acual argument   coz we are passing something
 ```
 ###### **NOW ACTUAL ARGUMENTS ARGUMENTS TYPES**
-1.Actual
+1. Actual
     * Position
     * Keyword
     * Default
