@@ -1,4 +1,4 @@
-#TYPES OF ARGUMENT AND THERE TYPES 
+# TYPES OF ARGUMENT AND THERE TYPES 
 
 **ARGUMENTS**
 1.FORMAL ARGUMENTS (parameter)
@@ -9,7 +9,7 @@
         print(c) 
 add(5,4)   # acual argument   coz we are passing something
 ```
-######**NOW ACTUAL ARGUMENTS ARGUMENTS TYPES**
+###### **NOW ACTUAL ARGUMENTS ARGUMENTS TYPES**
 1.Actual
     * Position
     * Keyword
