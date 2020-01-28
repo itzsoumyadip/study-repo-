@@ -48,3 +48,13 @@ def sum(a,*b):  # 5 is assign to "a" ,and "3,5,3" is assigned to *b as tuple
 sum(5,3,5,3)
 ```
 
+ **keyworded Varible Length argument = takes  both keyworded and Varible length to pass multiple data with keyword in actual argument**
+```python
+def person(name,**data):
+    print("")
+    print(data)
+    for i,j in data.items():
+        print(i,j)
+
+person('navin',age=28,city='Mumbai',mob=12345678)
+```
