@@ -16,3 +16,6 @@ lst=[20,25,19,22,65,78,89,96,78,54,21,45,15,36,62,35,81]
 even,odd,length=counter(lst)
 
 print(even,odd,length)
+
+print("Length :{}  Even:{} and Odd :{}".format(length,even,odd)) #fuction belong to string 
+
