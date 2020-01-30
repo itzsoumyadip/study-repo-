@@ -22,6 +22,10 @@ def is_even(n):
 print(list(filter(is_even,nums)))
 #[6, 8, 2, 4, 98, 36, 78]
 
+## normal fuction call for reduce example below 
+
+
+
 ## by lambda 
 print(list(filter(lambda n:n%2==0 ,nums)))
 #[6, 8, 2, 4, 98, 36, 78]
@@ -32,4 +36,13 @@ print(list(map(lambda n:n*2,nums)))
    
     ## add all value of the list by use of reduce
 from functools import reduce
-print(reduce(lambda a,b: a+b,nums)) 
+print(reduce(lambda a,b: a+b,nums))
+
+## normal fuction way for reduce 
+def add(a,b):
+    return a+b
+print(type(nums))
+print(reduce(add,nums))
+
+
+
