@@ -14,4 +14,19 @@ print(result)
 
 ## or  use math.factorial()
 
+# by recursion 
+i=0
+def facRec(x):
+    global i 
+    if(x==1):
+        return 1
+    else:
+        x=x*facRec(x-1)
+        i+=1  # number of times loop run
+        print('i',i)
+    return x
+   
+    
+res=facRec(7) 
+print(res)   
 
