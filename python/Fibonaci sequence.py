@@ -14,8 +14,10 @@ def fibonaci(n):
             c=a+b
             a=b
             b=c
+            if(c>n):       # this position checks value is inside 100 or not 
+              break
             print(c)            
 
 
 
-fibonaci(7)              
+fibonaci(100)           # finding factorial upto 100   
