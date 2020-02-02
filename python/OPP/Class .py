@@ -3,7 +3,7 @@ class Computer:          # class
         print('from class computer')   # behaviour or method 
 
 com=Computer()        ##com is the instance of class  computer  ,and  computer()
-com2=Computer()
+com2=Computer()    ##com2 is the instance of class computer
 
 com.config()    # behind the  scene config() will take com as parameter and pass it like config(com)
 # from class computer
