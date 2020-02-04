@@ -1,5 +1,7 @@
 class Computer:          # class 
     def config(self):         ## attributes   # self is the object which are passing 
+    # The self parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class.
+    # it does not have to be named self , you can call it whatever you like, but it has to be the first parameter of any function in the class:
         print('from class computer')   # behaviour or method 
 
 com=Computer()        ##com is the instance of class  computer  ,and  computer()
