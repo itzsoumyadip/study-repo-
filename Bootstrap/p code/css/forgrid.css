@@ -1,10 +1,38 @@
 .cols{
    border:3px solid red;
-    /* background-color:blue; */
+     /* background-color:blue;  */
     
 }
-.cner{
-    border:3px dashed;
-    height:500px;
+.cbox{
+    border:5px dashed;
+    
     border-radius:4.5px;  
 }
+.arow{
+       border:15px solid greenyellow;
+ }
+.adiv{
+     height:60px;   
+     background-color:violet;
+}
+.bdiv{
+    height:60px;   
+    background-color:darkblue;
+}
+.cdiv{
+    height:60px;   
+    background-color:red;
+}
+.ddiv{
+    height:60px;   
+    background-color:skyblue;
+}
+.ediv{
+    height: 60px;   
+    background-color:rebeccapurple;
+}
+.fdiv{
+    height: 60px;   
+    background-color:lavender;
+}
+

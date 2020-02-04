@@ -4,7 +4,7 @@ class Person:
         self.argu2 =  argu2
    
    
-    def compare(self,other):      
+    def compare(self,other):       ## here self is  taking the calling object and other takes the object that are passed as argument
          if self.argu2==other.argu2:
             return True
          else:
