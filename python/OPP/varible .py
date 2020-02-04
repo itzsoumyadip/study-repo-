@@ -1,6 +1,9 @@
+ ## NAMESPACE is an area where you create and store object /variables
+  
+
 ## class have two types of varible 
- # 1. class variable -: value will be same for all object 
- # 2. instance variable ::-- value will be different for all object 
+ # 1. class variable -: value will be same for all object   #IT STORE AT CLASS NAMESPACE
+ # 2. instance variable ::-- value will be different for all object  # #IT STORE AT iNSTANCE NAMESPACE
 
 
 class car:
