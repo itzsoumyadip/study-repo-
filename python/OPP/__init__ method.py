@@ -30,8 +30,10 @@ com.config()
  #config is  intel i7
 
 
-#change the  value of member varible by usinig member variable
+#Modify the  value of member varible by usinig member variable
 
 com.argu1=" ryzen"
 com.config()
 # config is   ryzen i7
+
+
