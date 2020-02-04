@@ -23,6 +23,15 @@ com.config()
 com2=computer('ryzen',5)
 com2.config()
  #config is  ryzen 5
+
+# change the value of member varible by function 
 com.setter('intel','i7')
 com.config()
  #config is  intel i7
+
+
+#change the  value of member varible by usinig member variable
+
+com.argu1=" ryzen"
+com.config()
+# config is   ryzen i7
