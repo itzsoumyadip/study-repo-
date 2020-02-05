@@ -1,3 +1,12 @@
+##  You can create object of inner class inside the outer class  .eg ->> self.lap = self.Laptop() 
+##                or 
+##  You can Create object of inner class outside the outer class provided you use outer  class name to call it . like  objectname = OuterClassNAME.InnerClass name
+
+
+
+
+
+
 class Student:   # outer class
      def __init__(self,name,rollno): 
          self.name=name
