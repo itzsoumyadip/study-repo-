@@ -6,7 +6,7 @@ print(a+b)  ## synthetic Sugar --> it try to simplify the code for user
 
 # this is what is happening  behind sence 
 
-print(int.__add__(a,b )) 
+print(int.__add__(a,b ))  # magic method
 # 11
 
 
