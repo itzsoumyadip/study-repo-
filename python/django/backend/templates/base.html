@@ -1,3 +1,4 @@
+{% load static  %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>django </title>
+    <script src="{% static 'test.js' %}"></script>
 </head>
-<body style="background-color:bindi;">
-    
+<body style="background-color:red;">
+     
     {% block content %} 
 
     {% endblock %}

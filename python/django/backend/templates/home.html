@@ -3,7 +3,20 @@
 
 {% block content %}              <!-- from her the content that will be added on base.html page in block content  area -->
 
-<h1>Hellow {{name}}  !!</h1>
-</body>   
+<h1>Hellow {{name}}  !!</h1> 
+<form action="add">
+  
+    Enter a number:-<input type="text" name="num1"><BR>
+    Enter a number:-<input type="text" name="num2">
+    <input type="submit">
+
+
+</form>    
+ <p>
+    {% for num in lis %}
+    <h{{ num }}> life is cool  </h{{ num }}>
+    {% endfor %}
+
+ </p>
 
 {% endblock %}
