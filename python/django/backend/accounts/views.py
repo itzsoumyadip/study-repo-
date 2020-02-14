@@ -20,5 +20,7 @@ def register(request):
                 user = User.objects.create_user(username=username,password=password1,email=email,first_name=first_name,last_name=last_name) #intial the value form register page to database 
                 user.save() # save the data to database
                 print('user Created')
+        else:
+            print('password not match')
         return redirect('/')  ## redirect the page
     return render(request,'register.html',{'print':'welcome'})
