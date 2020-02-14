@@ -2,11 +2,12 @@
 {% block content %}    
 {% for dest in dests %}
     <br> Destination:{{dest.name}}
-    <br> img:
-    <br> Price:{{dest.price}}
-    {% if offer %}
+    <br> <img src="{{dest.img.url}}">
+    <br> Price:${{dest.price}}
+    {% if dest.offer %}
          <br> SPECIAL OFFER
     {% endif %}
+    <br>
 {% endfor %}      
 
 {% endblock %}
