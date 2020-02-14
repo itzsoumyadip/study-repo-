@@ -1,0 +1,12 @@
+{% extends 'base.html' %}   
+{% block content %}    
+{% for dest in dests %}
+    <br> Destination:{{dest.name}}
+    <br> img:
+    <br> Price:{{dest.price}}
+    {% if offer %}
+         <br> SPECIAL OFFER
+    {% endif %}
+{% endfor %}      
+
+{% endblock %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import TemplateView
+from .models import destination
 # Create your views here.
 
 def home(request):
@@ -24,6 +25,11 @@ class ListView(TemplateView):
      
        
 """     
+
+def travel(request):
+    dests = destination.objects.all()
+    return render(request,"travel.html",{'dests':dests})
+
      
      
      

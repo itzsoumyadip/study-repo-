@@ -7,5 +7,6 @@ urlpatterns = [
     path('',views.home,name='home'),
 #    path('',views.ListView.as_view(),name="home"),
     path('add',views.add,name='add'),
+    path('travel',views.travel,name='travel'),
   
 ] 
