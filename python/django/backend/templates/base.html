@@ -1,4 +1,5 @@
 {% load static  %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +9,18 @@
     <title>django </title>
     
 </head>
-<body style="background-color:red;">
+<body style="background-color:cyan;">
          <a href="../"<b>HOME</b></a> &nbsp | &nbsp <a href="travel"<b>TRAVEL PAGE</b></a>
-         &nbsp | &nbsp <a href="accounts/register"<b>Registration</b></a>
+       {% if user.is_authenticated %}  <!--if user is login (authenticate)  build in django function-->
+       &nbsp | &nbsp
+       <b>hello,{{user.first_name}}</b>
+        &nbsp | &nbsp <a href="accounts/logout"<b>Logout</b></a>           
+       {% else %}
+        &nbsp | &nbsp <a href="accounts/register"<b>Registration</b></a>
+        &nbsp | &nbsp <a href="accounts/login"<b>LOGIN</b></a>
+
+        {% endif %}
+
     {% block content %} 
 
     {% endblock %}

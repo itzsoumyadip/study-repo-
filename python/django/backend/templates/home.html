@@ -2,8 +2,11 @@
 
 
 {% block content %}              <!-- from her the content that will be added on base.html page in block content  area -->
-
-<h1>Hellow {{name}}  !!</h1> 
+{% if user.first_name %}
+<h1>Hellow {{user.first_name}}  !!</h1>
+{%else%}
+<h1>Hellow User !!</h1>
+{% endif %}
 <form action="add" method=POST>
     
     {% csrf_token %}
@@ -20,5 +23,5 @@
     {% endfor %}
 
  </p>
-
+copyright@{{name}}
 {% endblock %}
