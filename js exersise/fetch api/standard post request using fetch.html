@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Taking fetch Input</title>
+</head>
+<body>
+    
+    <div id="output"></div>
+
+
+    <form id="addpost" >
+        <div>
+           <input id="title" type="text" placeholder="Title">
+        </div>
+         <div>
+           <textarea id="body" placeholder="Body"></textarea>
+        </div> 
+        <div><input type="submit" value="upload">  </div>   
+
+
+
+    </form>
+    
+<script>
+    document.getElementById("addpost").addEventListener('submit',addpost)
+
+
+ function addpost(e){
+    e.preventDefault()   
+    
+    let title=document.getElementById("title").value
+    let body =document.getElementById("body").value 
+
+    fetch('https://jsonplaceholder.typicode.com/posts',{
+        method:'POST',
+        headers:{
+            'Accept':'aplication/json, text/plain , */* ',
+            'Content-type':'application/json'
+        },
+        body:JSON.stringify({title:title , body:body})
+    })
+    .then(res => res.json())
+    .then(data => {
+            
+        let output ='<h2> json</h2>';
+
+        
+        output +=`
+        <div>
+           <h3>${data.title}</h3>
+           <p>${data.body}</p>
+           <p>${data.id}</p>
+        </div>
+       `;
+        console.log(data)
+
+        document.getElementById("output").innerHTML=output;
+        
+       }) 
+
+ }
+</script> 
+
+
+
+
+</body>
+
+</html>
