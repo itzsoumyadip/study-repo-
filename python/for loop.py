@@ -1,13 +1,12 @@
 a=['lamp',65,43,'name']
 for i in a[:]:
     print(i)
-
 # lamp
 # 65
 # 43
 # name
-
-
+print("outside i" +str(i)+ " ebdf")  # we can acess the vale of for loop i (last)value outside the loop  
+# name
 
 
 
