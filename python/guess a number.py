@@ -16,7 +16,7 @@ for i in range(1,7):   # number of times user will get chance is 6
             break  # if the user guess the correct number 
          
 if guessnumber == secretNumber:
-    print("YEA! you guess is 100% correct Number is: " + str(guessnumber) + " indeed. you have taken "+ str(i)+ " times of times to guess it" )        
+    print("YEA! you guess is 100% correct Number is: " + str(guessnumber) + " indeed. you have taken "+ str(i)+ " times to guess it" )        
 else:
     print("your guessing number is: "+ str(secretNumber))  # if user unable to guess the nuber
 
