@@ -1,0 +1,6 @@
+test file !! 
+this is the first file that wre used for file handling with python
+
+some lines for read by the program 
+
+this file name is "for_handiling.txt"
