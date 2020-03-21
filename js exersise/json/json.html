@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Json</title>
+</head>
+<body>
+    <script>
+        let JsonObject ={
+            "firstname":"Itzsoumyadip",
+            "lastname" : "vscode",
+            "age":19,
+            "profession":"full stack developer"
+
+           }
+
+         // modify the json value
+         //use .notation to modify any value in json  
+          JsonObject.lastname="vikash"
+          
+          // add new key value pair
+           JsonObject.nickname="iamacoder"
+      
+           //delete a key value pair
+           delete JsonObject.lastname
+
+
+       ///fetching all the values form json
+       for (showALlData in JsonObject){
+           document.write(JsonObject[showALlData] + "<BR>" )
+       }    
+        
+
+
+    </script>    
+</body>
+</html>
