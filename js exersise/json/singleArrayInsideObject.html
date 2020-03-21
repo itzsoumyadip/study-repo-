@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+        let JsonObject={
+
+            "array":["name","roll","class","age"],
+            "array1":["itzsoumyadip","2","json","19"]
+       }
+
+
+  // fetching the value manualy     
+
+document.write(JsonObject.array)
+document.write("<br>")
+document.write(JsonObject.array1)
+document.write("<br>")    
+
+
+// in one loop 
+        for( eachkey in JsonObject){
+            document.write(JsonObject[eachkey] + "<br>")
+        }
+
+
+
+
+</script>
+
+    
+</body>
+</html>
