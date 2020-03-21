@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let JsonObject={ 
+
+              /* mainKey
+                   |
+                   v  */ 
+                "array":[
+              // INDEX #0
+                            {
+                                "Object1Ke1":"1st object's 1 key  value",
+                                "Object1Key2":"1st object's 2nd key value",
+                            } ,
+                  //1          
+                            {
+                                "Object2Key1":"2nd object's 1 key  value",
+                                "Object2Key2":"2nd object's 2 key  value",
+                            } ,
+
+                //2        
+                            {
+                                "Object3Key1":"3rd object's 1 key  value",
+                                "Object3Key2":"3rd object's 2 key  value",
+                            } ,
+                //3    
+                            {
+                                "Object4Key1":"4th object's 1 key  value",
+                                "Object4Key2":"4th object's 2 key  value",
+                            }
+                                                                                            
+                         ]
+                            
+        
+        }
+
+  ///  accessing the value of ARRAY OBJECT
+   //document.write(JsonObject.array[0].Object1Ke1)
+             //  mainobject . mainObject's Key [IndexOf Inside's Object of an array] . Inside Oject's Key                    
+
+
+
+  ///               
+                         for(mainKey  in JsonObject){ // it will loop over each (main) Key in the outer object like  (object . Key)  
+                                
+                            for(Inside_Index in JsonObject[mainKey]){  // Inside_Index will get  index number of inside Oject one by one LIKE (Object .key [array oject index]) 
+ 
+                                for ( Inner_Object_Key  in JsonObject[mainKey][Inside_Index]){ // loop through  inner object key like OutterObject.mainKey[array object index].innerobject Key
+                            
+                                    document.write(Inner_Object_Key + " : " + JsonObject[mainKey][Inside_Index][Inner_Object_Key] + "<BR> <BR>")
+                                        //                                  JsonObject [array]       [0]          [Object1ke1]
+                                }       
+
+                            }
+
+                         }
+
+
+
+
+
+        </script>
+
+
+<!-- 
+       
+
+            
+                 //  mainobject . mainObject's Key [IndexOf Inside's Object of an array] . Inside Oject's Key      
+
+        } -->
+
+</body>
+</html>
