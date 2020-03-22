@@ -50,7 +50,7 @@
 
 
 
-  ///               
+  ///by looping                
                          for(mainKey  in JsonObject){ // it will loop over each (main) Key in the outer object like  (object . Key)  
                                 
                             for(Inside_Index in JsonObject[mainKey]){  // Inside_Index will get  index number of inside Oject one by one LIKE (Object .key [array oject index]) 
@@ -64,6 +64,16 @@
                             }
 
                          }
+
+
+// another logic
+
+        for(x in JsonObject.array){
+            for(inner_x in JsonObject.array[x]){
+                document.write(JsonObject.array[x][inner_x]+"<br>")
+            }
+        }                 
+
 
 
 
