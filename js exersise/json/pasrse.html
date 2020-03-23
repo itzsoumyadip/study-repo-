@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jsobj_to_json_via_JSON_stringify_fumction</title>
+</head>
+<body>
+    <script>
+    // javascript object creation
+        let jsObj={name:"itzsoumyadip",fear:"corona virus",place:"india"}
+
+
+
+        //Convert a JavaScript object into a string with JSON.stringify().
+
+          let jsObj_to_String = JSON.stringify(jsObj)
+  
+                         // conversion 
+          //   json string  to js object 
+        let newJsObj=JSON.parse(jsObj_to_String)
+    
+     
+       //   document.write(newJsObj) //[object Object]
+        
+       
+
+          document.write(newJsObj.name)
+        
+          document.write("<br>")
+
+   /// loop 
+         for( key in newJsObj ){
+             document.write(key+ ": "+ newJsObj[key] )
+
+
+      
+         //    name: itzsoumyadip
+         //    fear: corona virus
+         //    place: india
+
+      
+      
+      
+      
+             document.write("<br>")
+         }
+
+
+
+</script>
+</body>
+</html>
