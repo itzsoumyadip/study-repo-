@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jsobj_to_json_via_JSON_stringify_fumction</title>
+</head>
+<body>
+    <script>
+    // javascript object creation
+        let jsObj={name:"itzsoumyadip",fear:"corona virus",place:"india"}
+
+
+
+        //Convert a JavaScript object into a string with JSON.stringify().
+
+          let convertedString = JSON.stringify(jsObj)
+  
+    
+          // printig string  it will print like json  data (json string)
+    
+      document.write(convertedString) //converted to json data:-//  {"name":"itzsoumyadip","fear":"corona virus","place":"india"}
+  
+  
+  
+
+//  sending data to  server
+
+  
+        window.location="send.php?values="+convertedString;
+       //              "pagenameWhere to send this data?varivle="(+concate)data
+//
+
+
+
+//url output--
+//json/send.php?values={%22name%22:%22itzsoumyadip%22,%22fear%22:%22corona%20virus%22,%22place%22:%22india%22}            
+
+//%22 = "
+
+</script>
+</body>
+</html>
