@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetching_data_from_json_file  by AJAX</title>
+</head>
+<body>
+    <script>
+
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange =function(){
+            if (this.readyState == 4 && this.status == 200){
+
+            
+          // Acessing Response 
+    /*     we send request as  string format  and t  
+      and 
+        RESPONSETEXT PROPERTY RETURNS THE RESPONSE AS A STRING 
+
+            
+
+  */          
+     
+   /// output as  string format of response
+
+     document.write(xhttp.responseText)
+     // output
+        //{ "emoloyee":[ { "name":"itzsoumyadip", "age":19 }, { "name":"hadu", "age":20 }, { "name":"itzsoumyadip", "age":19 }, { "name":"dip", "age":15 } ] } 
+            
+            
+   
+/// output as JS object  format 
+                
+        let res=JSON.parse(xhttp.responseText)   // js object convertion
+
+   
+ /*  
+   
+        console.log(res) // array output
+               
+                                 {emoloyee: Array(4)}
+                                    emoloyee: Array(4)
+                                    0:
+                                    name: "itzsoumyadip"
+                                    age: 19
+                                    __proto__: Object
+                                    1:
+                                    name: "hadu"
+                                    age: 20
+                                    __proto__: Object
+                                    2:
+                                    name: "itzsoumyadip"
+                                    age: 19
+                                    __proto__: Object
+                                    3:
+                                    name: "dip"
+                                    age: 15
+                                    __proto__: Object
+                                    length: 4
+    */ 
+    
+   
+   
+  /* 
+                
+         console.log(res.emoloyee)  // as an object
+
+
+                    (4) [{…}, {…}, {…}, {…}]
+                        0: {name: "itzsoumyadip", age: 19}
+                        1:
+                        name: "hadu"
+                        age: 20
+                        __proto__: Object
+                        2:
+                        name: "itzsoumyadip"
+                        age: 19
+                        __proto__: Object
+                        3:
+                        name: "dip"
+                        age: 15
+                        __proto__: Object
+                        length: 4
+
+
+    */      
+    
+     
+
+             document.write(res.emoloyee[0].name)    // printing only one data
+
+
+
+
+          // in loop 
+          
+          let showdata = ""
+
+                
+
+        for(let i=0; i<res.emoloyee.length;i++){
+            showdata += res.emoloyee[i].age + "<br>";
+        }
+        document.write(showdata)
+
+
+
+
+
+
+
+
+
+
+            }
+        };
+
+/*    
+  note :  
+ 1   onreadystatechange            
+      onreadystatechange event is triggerd every time the  readyState changes
+
+
+
+
+  2          this.readyState == 4  :  
+
+            here this represent xhttp object
+      
+        and here 4     means
+                    0: request not initialized 
+                    1: server connection established
+                    2: request received 
+                    3: processing request 
+                    4: request finished and response is ready
+
+
+      
+      
+   3     this.status == 200
+
+             http status code    
+
+
+
+
+*/
+
+
+
+
+
+
+
+        xhttp.open("GET","json.json" ,"true");
+         //     ("method","url:file Location", "asc:true(asynchronous)or false(synchronous)")
+
+     xhttp.send();     
+    </script>
+
+
+
+</body>
+</html>
