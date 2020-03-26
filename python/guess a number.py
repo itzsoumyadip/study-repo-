@@ -5,6 +5,7 @@ import random
 from cs50 import get_int,get_string
 
 secretNumber =random.randint(1,20)   # a random number will be genarate
+                                    #random.randint() A random integer within the given range as parameters.
 
 
 name=get_string("Hello, What is your name ?")
