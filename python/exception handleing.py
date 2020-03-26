@@ -1,5 +1,5 @@
 a =5 
-b = 2
+b = 5
 
 try:
     ## can perform any operation in try block 
@@ -11,7 +11,7 @@ except ZeroDivisionError as Z: # ZeroDivisionError  is a error class   # specify
     print('hey you cannot divide a Number by zero :',Z)  # with the help of  Z error will be print out 
 
 except ValueError as V:   # specify the specific type of exception 
-    print('Invalid Input')   # Invalid Input if int is not enter
+    print('Invalid Input:',V)   # Invalid Input if int is not enter
 
 except Exception as e:   # Exception can handle any kind of exception 
     print('some thing went wrong')
