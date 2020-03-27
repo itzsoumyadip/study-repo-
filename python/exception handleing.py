@@ -16,5 +16,5 @@ except ValueError as V:   # specify the specific type of exception
 except Exception as e:   # Exception can handle any kind of exception 
     print('some thing went wrong')
 
-finally:         ## finally  block will be executed if we ger error as well as if we don't ger the error
+finally:        ## finally  block will be executed if we ger error as well as if we don't ger the error
     print('resources Closed')
