@@ -1,3 +1,7 @@
+
+
+
+
 a =  {'rahul':'samsung', 'kiran':'Iphone','Dev': 'Oneplus'}
 print(a.keys())
   # dict_keys(['rahul', 'kiran', 'Dev'])
