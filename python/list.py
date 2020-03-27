@@ -85,3 +85,14 @@ print("dip" in lis)#false
 #adding values in list by using slice 
 lis[1:3]= ["cat","dog","well"]  # value for lis list form 1 to 3 will be replace by new one 
 print(lis) #['s', 'cat', 'dog', 'well'] 
+
+
+# MUltiple assigment  in list 
+cat =['fat','orange','loud']
+size,color,noise=cat     # putting cat list iteam in multiple varible 
+#one catch here i.e left=right, means total number of varible =total numbe of list value
+print(size,color,noise) #fat orange loud
+
+
+
+# For loops Technically iterate  over the value in a list
