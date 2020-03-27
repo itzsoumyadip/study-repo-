@@ -79,6 +79,9 @@ print(list('HELLO')) # predefine funcuin convert String into list
 lis=["s","L","Sfd","last"]
 print("L" in lis) # True
 
+print("dip" in lis)#false
+
+
 #adding values in list by using slice 
 lis[1:3]= ["cat","dog","well"]  # value for lis list form 1 to 3 will be replace by new one 
 print(lis) #['s', 'cat', 'dog', 'well'] 
