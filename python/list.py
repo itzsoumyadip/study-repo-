@@ -1,13 +1,28 @@
 ## list is Muteable  
 
 list=[9.5,'saha',23]   # different types of data in  
-print(list[:2])
+
+print(list[1]) #'saha    # Index = Single value
+print(list[-1]) #23   #last index
+
+print(list[:2])   #[9.5, 'saha']   #SLICE= list of values, list[a:b-1] <-- formula for slicing
 
 NumList=[23,43,45,56] #number list 
 StringList=['saha','shome','pal'] #string list 
 
+
+# combine two list  into single list item
 mil=[NumList,StringList] # mislaneous list (contin both number list and string list in one single list )
 print(mil) # [[23, 43, 45, 56], ['saha', 'shome', 'pal']]
+
+print(mil[0])  #[23,43,45,56]]
+print(mil[0][1]) #43 
+ 
+print(mil[1]) #['saha','shome','pal']
+
+
+
+#method on list 
 
 NumList.append(34) #appending in the list  at the end 
 print(NumList) # [23, 43, 45, 56, 34]
@@ -23,7 +38,7 @@ print(NumList) #[23, 82, 45, 34]
 
 print(NumList.pop()) # removes the last element in the list ,and return item at the index
 #34
-
+  #delete the list value
 del NumList[1:] # delete multiple values from specified index
 print(NumList) #[23]
 
@@ -47,3 +62,23 @@ print(NumList) # [23, 24, 45, 54, 61, 72, 93]
 ## ************************ ##
 
 print(NumList.clear()) # Remove all the items from the list  --(Answer -- None)
+
+
+### List replication
+list =list*3
+print(list)  # [9.5, 'saha', 23, 9.5, 'saha', 23, 9.5, 'saha', 23]
+
+
+## convert  string to list 
+del list ## because i use List as  varible in above funcion so it will give error if we use List() predifine function
+print(list('HELLO')) # predefine funcuin convert String into list
+#['H', 'E', 'L', 'L', 'O']
+
+
+# find in list  
+lis=["s","L","Sfd","last"]
+print("L" in lis) # True
+
+#adding values in list by using slice 
+lis[1:3]= ["cat","dog","well"]  # value for lis list form 1 to 3 will be replace by new one 
+print(lis) #['s', 'cat', 'dog', 'well'] 
