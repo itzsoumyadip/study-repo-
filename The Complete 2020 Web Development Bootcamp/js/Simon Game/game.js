@@ -199,7 +199,26 @@ $("html").keydown(function(){
     
 })
 
+// for mobile 
 
+
+$("html").click(function(){
+   
+    if(!gameStart){
+        nextSequence()
+      
+        gameStart=true
+    }
+    else{
+        gameStart=true
+    }
+
+   
+    
+
+    console.log("i am pressed");
+    
+})
 
 
 
