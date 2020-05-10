@@ -2,5 +2,7 @@
 .pytest_cache
 *.pyc
 /*.pyc
+*.yml
 node_modules
 node_modules/
+
