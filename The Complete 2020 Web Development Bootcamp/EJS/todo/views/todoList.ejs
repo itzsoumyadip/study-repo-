@@ -5,7 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
 </head>
-<body>
-        <h1> <%= foo %></h1>
+<body> 
+    
+    <H1><%= Day %></H1>
+
+            <ul>   
+                    <% for(let i=0;i<items.length;i++) { %>
+                    <li> <H1><%= items[i] %></H1></li>
+                    <%}%>
+                  
+            </ul>
+
+
+      <form action="/"  method="post">
+       <ul>
+           <li><input name="newItem" placeholder="<%=Day%>"></li>
+       </ul>
+        <input type="submit" value="submit">
+      </form>
+        
+
+      </form>  
 </body>
 </html>

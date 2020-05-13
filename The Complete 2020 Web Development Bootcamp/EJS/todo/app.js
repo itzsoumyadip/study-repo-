@@ -2,17 +2,38 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 
-const app=express();
-app.set('view engine','ejs');
 
+const app=express();
+
+
+app.set('view engine','ejs');
+app.use(bodyParser.urlencoded({ extended:true}))
+
+var items=[2,3,5,]
+
+
+
+app.get('/',function(req,res){
 
 var today =new Date()
-var currentDay=today.getDay()
-var currentDate=today.getDate()
-var FY=today.getFullYear()
+var option ={
+    weekday:"long",
+    day:"numeric",
+    month:"long",
+    year:"numeric"
+}
+var currentDate=today.toLocaleDateString("en-US",option)    
 
-app.get("/",function(req,res){
-    res.render('todoList',{foo:FY})
+     res.render("todoList",{Day:currentDate,items:items })
+    
+})
+
+app.post("/",function(req,res){
+   var item=req.body.newItem
+   items.push(item)
+   res.redirect('/')
+
+     
 })
 
 
