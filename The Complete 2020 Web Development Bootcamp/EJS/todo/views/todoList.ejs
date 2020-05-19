@@ -1,30 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo</title>
-</head>
-<body> 
-    
-    <H1><%= Day %></H1>
+<%- include('header') -%>
+    <div  class="box" id="heading">
+		 <H1><%= Day %></H1>
+    </div>    
+	
+                <div class="box" >
+                    <% for(let i=0;i<newListitems.length;i++) { %>
+                 <div class="item">
+                     <input type="checkbox">    
+                     <p><%= newListitems[i] %></p>
+                     </div>    
+                     <%}%>
+                    <form class="item" action="/"  method="post">
+       
+                         <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                   
+                         <button  type="submit" value="<%= Day %>" name="button">+</button
+                      </form>
+                </div> 
+            
 
-            <ul>   
-                    <% for(let i=0;i<items.length;i++) { %>
-                    <li> <H1><%= items[i] %></H1></li>
-                    <%}%>
-                  
-            </ul>
-
-
-      <form action="/"  method="post">
-       <ul>
-           <li><input name="newItem" placeholder="<%=Day%>"></li>
-       </ul>
-        <input type="submit" value="submit">
-      </form>
+<%- include('footer') -%>
+      
         
 
-      </form>  
-</body>
-</html>
