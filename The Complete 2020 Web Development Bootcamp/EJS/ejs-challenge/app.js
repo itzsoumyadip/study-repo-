@@ -15,10 +15,17 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+//  variable declare area
+
+let posts=[]
 
 
 app.get('/',function(req,res){
-  res.render("home",{homeContent:homeStartingContent})
+  res.render("home",{
+    homeContent:homeStartingContent,
+    posts:posts,  
+
+  })
 })
 
 app.get('/about',function(req,res){
@@ -41,7 +48,12 @@ app.post('/compose',function(req,res){
     pTitle:req.body.postTitle,
     pBody:req.body.postBody
  } 
- console.log(post.pTitle)
+
+posts.push(post)
+
+ console.log(posts)
+
+ res.redirect('/')
 
 })
 
@@ -51,6 +63,11 @@ app.post('/compose',function(req,res){
 
 
 
+
+
+
+
+// server port
 
 app.listen(7005, function() {
   console.log("Server started on port 7005");

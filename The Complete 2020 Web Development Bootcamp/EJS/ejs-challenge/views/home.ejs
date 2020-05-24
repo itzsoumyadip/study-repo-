@@ -1,8 +1,14 @@
 <%- include('partial/header.ejs'); -%>
 <h1> Home  
 </h1>
-<p>  <%= homeContent %>  
-
+<p> 
+    <% posts.forEach(function(post){   %> 
+     <h6>Title</h6>
+    <%= post.pTitle %>
+    <h6>Post</h6>
+    <%= post.pBody %>
+    <br>  
+    <% });  %>
 </p>
 
 <%- include('partial/footer'); -%>
