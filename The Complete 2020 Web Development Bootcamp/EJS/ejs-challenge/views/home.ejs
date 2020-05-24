@@ -4,11 +4,11 @@
 <p>  <%=  homeContent %>
  </p>
 
-
+      
     <% posts.forEach(function(post){   %> 
      <h1><%= post.pTitle %></h1>
     
-    <p><%= post.pBody %></p>
+    <p><%= post.pBody.substring(0,100)+ "..." %><a href="/posts/<%= post.pTitle %>">Read More</a></p>       <!-- i use substring to trunkcate the post body -->
     
     <br>  
     <% });  %>
