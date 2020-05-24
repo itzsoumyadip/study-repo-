@@ -1,7 +1,8 @@
 
 module.exports.getDate=getDate
-/* ogject     .properties:function */
+/* ogject     .property:function */
 
+// property will be access by  app .js not by function name specify here
 
 function getDate(){
 var today =new Date()
@@ -35,3 +36,19 @@ return today.toLocaleDateString("en-US",option)
 
 
 }
+
+
+/** same code with shorter version 
+
+module.exports.getDay=function {
+var today =new Date()
+
+var option ={
+    weekday:"long",
+   
+}
+return today.toLocaleDateString("en-US",option)  
+
+
+
+} 
