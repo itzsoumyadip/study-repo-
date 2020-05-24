@@ -28,6 +28,7 @@ app.get('/',function(req,res){
   })
 })
 
+
 app.get('/about',function(req,res){
   res.render("about",{aboutContent :aboutContent})
 })
@@ -35,6 +36,10 @@ app.get('/about',function(req,res){
 app.get('/contact',function(req,res){
   res.render("contact",{contactContent :contactContent})
 })
+
+
+
+
 
 
 app.get('/compose',function(req,res){
@@ -57,8 +62,21 @@ posts.push(post)
 
 })
 
+  //  dynamic url  request
+app.get('/posts/:postName',function(req,res){
+      console.log(req.params.postName)
+
+       // checking dynamic routing with post(object) tile for matching post title 
+    posts.forEach(function(post){
+      if(post.pTitle==req.params.postName){
+         console.log("match");
+         }else{
+          console.log("no match ");
+         }
+    })
 
 
+})
 
 
 
