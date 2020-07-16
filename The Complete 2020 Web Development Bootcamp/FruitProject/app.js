@@ -27,9 +27,11 @@ const fruit=new Fruit({  // creating a object  document , it will insert in data
 //fruit.save(); // save the  document in the database
 
 const personSchema=new mongoose.Schema({
-  
+     _id:Number,
     name:String,
-    age:Number    
+    age:Number,
+    favouriteFruit:fruitSchema,
+
 });
 
 const Person=mongoose.model("Person",personSchema);
@@ -90,7 +92,7 @@ const Peach = new Fruit({
 //     printing data form mongo server with the help of mongoose
 
  Fruit.find(function(err,fruits){ // error and fruits array (return collection  )
-    mongoose.connection.close();     // disconnect the mongodb
+    // mongoose.connection.close();     // disconnect the mongodb
      fruits.forEach(function(fruit){             // for each fruits array 
          console.log(fruit.name)
      });
@@ -119,7 +121,7 @@ Fruit.updateOne({_id:3},{rating:3},function(err){
             
 })
 
-// we also can add new coloum wit update one  method 
+// we also can add new coloum with update one  method 
 
 // delete one
 
@@ -157,3 +159,39 @@ Person.find((err,people)=>{
 
 
 
+// adding new  column in 
+        // adding new column in person table 
+
+        // after adding 
+                        // favouritFruit in person schema
+
+    var  pineapple = new Fruit()
+
+            pineapple._id=7,
+            pineapple.name="Pinapple",
+            pineapple.rating=10,
+            pineapple.review="smells and test so good!!",
+
+            pineapple.save();
+
+
+
+            var  tannya = new Person()
+            tannya._id=2,
+            tannya.name="Tannya Song",
+
+            tannya.age=18;
+
+            tannya.favouriteFruit=pineapple;
+
+            tannya.save()
+
+ // adding  new column in   old field   in table         
+
+
+    Person.updateOne({name:"Soumyadip"},{favouriteFruit:Peach},function(err){
+        if(err)
+            console.log(err)
+        else    
+            mongoose.connection.close();    
+    })
