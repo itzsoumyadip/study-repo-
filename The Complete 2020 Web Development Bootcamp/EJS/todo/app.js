@@ -51,6 +51,15 @@ var documetItem=[item1,item2,item3];
 
 
 
+// 
+
+const listSchema =mongoose.Schema({
+	name:String,
+	item:[itemsSchema]  // array of documents 
+})
+
+
+const listName=mongoose.model("list",listSchema)
 
 
 
@@ -72,7 +81,7 @@ var workItem=[2,3]
 
 
 
-// request and response 
+// request and response  for user
 
 
 app.get('/',function(req,res){
@@ -195,6 +204,47 @@ app.post('/work',function(req,res){
 app.get('/about',function(req,res){
 		res.render("about")
 })			 
+
+
+
+
+app.get("/:customTodoList",function(req,res){
+	console.log(req.params.customTodoList)
+	const reqListname=req.params.customTodoList
+	
+	listName.findOne({name:reqListname},function(err,foundlist){
+		
+		if(!err){
+				if(!foundlist){
+				
+					var newList=new listName({
+						name:reqListname,
+						item:documetItem 		//collection of document
+					})
+					newList.save()
+						
+					res.redirect("/"+reqListname)
+			
+					}else{
+						res.render("todoList",{Day:reqListname,newListitems:foundlist.item})						
+					}
+			}else 
+			console.log(err);
+				
+	})
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
