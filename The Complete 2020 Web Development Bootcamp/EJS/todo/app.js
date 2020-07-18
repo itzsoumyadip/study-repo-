@@ -129,7 +129,8 @@ app.get('/',function(req,res){
 
 app.post("/",function(req,res){
 	
-   var item=req.body.newItem
+   var postItems=req.body.newItem
+
 		console.log(req.body)
 				
 
@@ -140,15 +141,45 @@ app.post("/",function(req,res){
 					workItem.push(item);
 					res.redirect('/work')
 			
-				
-				 
-				
-			}else{items.push(item)
+									
+			}else{
+				 // adding new item form user  to database
 
-			res.redirect('/')
+				const postitem=new item({
+					name:postItems
+				})
+					postitem.save()
+
+				res.redirect('/')
 			}
-     
+ 
+			
 })
+
+app.post('/delete',function(req,res){
+	
+	var docummetID=req.body.checkbox;
+
+	item.deleteOne({_id:docummetID},function(err){
+		if(!err)
+			console.log("successfully removed id");
+	
+			
+	})
+	res.redirect('/')
+
+
+
+
+	
+})
+
+
+
+
+
+
+
  // for work Item
 app.get('/work',function(req,res){
 		res.render("todoList",{Day:date.getDate(),newListitems:workItem})
