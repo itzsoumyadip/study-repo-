@@ -112,7 +112,7 @@ app.get('/',function(req,res){
 
 					
 				else	
-					res.render("todoList",{Day:currentDay,newListitems:items})						
+					res.render("todoList",{PageTitle:"Main",Day:currentDay,newListitems:items})						
 				
 						
 				
@@ -138,7 +138,60 @@ app.get('/',function(req,res){
 	})
 
 app.post("/",function(req,res){
-	
+
+
+	var postItems=req.body.newItem
+	var PageTitle=req.body.button
+
+		console.log(req.body)
+				
+
+             
+			if(req.body.button==="Main"){
+                // adding new item form user  to database main database
+
+				const postitem=new item({
+					name:postItems
+				})
+					postitem.save()
+
+				res.redirect('/')
+		
+			
+									
+			}else{
+			
+			// add dynamic list data here	 
+			}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/* 	
    var postItems=req.body.newItem
 
 		console.log(req.body)
@@ -163,7 +216,7 @@ app.post("/",function(req,res){
 				res.redirect('/')
 			}
  
-			
+	 */		
 })
 
 app.post('/delete',function(req,res){
@@ -219,6 +272,7 @@ app.get("/:customTodoList",function(req,res){
 	 var reqListname=_.capitalize(req.params.customTodoList);
 	 console.log(reqListname)
 	 
+	 
 	if(reqListname!="Favicon.ico"){
 	 listName.findOne({name:reqListname},function(err,foundlist){
 		
@@ -234,7 +288,7 @@ app.get("/:customTodoList",function(req,res){
 					res.redirect("/"+reqListname)
 			
 					}else{
-						res.render("todoList",{Day:reqListname,newListitems:foundlist.item})						
+						res.render("todoList",{PageTitle:reqListname,Day:reqListname,newListitems:foundlist.item})						
 					}
 			}else 
 			console.log(err);
