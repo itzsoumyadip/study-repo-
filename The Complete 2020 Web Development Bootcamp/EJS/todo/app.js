@@ -1,10 +1,12 @@
-
 // modules import
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
-const date= require(__dirname +'/dateModule.js')
 const mongoose = require('mongoose');
+var _ = require('lodash');
+// internal module
+const date= require(__dirname +'/dateModule.js')
+
 
 console.log(date)
 
@@ -75,7 +77,6 @@ const listName=mongoose.model("list",listSchema)
    
    var items=[2,3,5,5]
 var workItem=[2,3]
-
  */
 
 
@@ -208,11 +209,18 @@ app.get('/about',function(req,res){
 
 
 
+
+
+
+// database
+
 app.get("/:customTodoList",function(req,res){
-	console.log(req.params.customTodoList)
-	const reqListname=req.params.customTodoList
 	
-	listName.findOne({name:reqListname},function(err,foundlist){
+	 var reqListname=_.capitalize(req.params.customTodoList);
+	 console.log(reqListname)
+	 
+	if(reqListname!="Favicon.ico"){
+	 listName.findOne({name:reqListname},function(err,foundlist){
 		
 		if(!err){
 				if(!foundlist){
@@ -231,12 +239,13 @@ app.get("/:customTodoList",function(req,res){
 			}else 
 			console.log(err);
 				
-	})
+	 })
+	}else {
+		console.log("fuck i save my ass");
+		
+	}
+
 })
-
-
-
-
 
 
 
@@ -255,4 +264,3 @@ app.listen(7007,function(){
     console.log("Server is up and running at 7007");
  
 })
-
