@@ -141,27 +141,39 @@ app.post("/",function(req,res){
 
 
 	var postItems=req.body.newItem
-	var PageTitle=req.body.button
+	var PageTitle=_.capitalize(req.body.button);
 
 		console.log(req.body)
 				
+					const postitem=new item({
+						name:postItems
+					})
 
              
 			if(req.body.button==="Main"){
                 // adding new item form user  to database main database
 
-				const postitem=new item({
-					name:postItems
-				})
-					postitem.save()
-
+				postitem.save()
 				res.redirect('/')
-		
-			
 									
 			}else{
 			
 			// add dynamic list data here	 
+
+			listName.findOne({name:PageTitle},function(err,found){
+
+				
+				 
+				found.item.push(postitem)  // we have to push an document type object
+				found.save()
+				
+				res.redirect('/'+PageTitle)
+					
+			})		
+		
+
+
+
 			}
  
 
@@ -222,16 +234,29 @@ app.post("/",function(req,res){
 app.post('/delete',function(req,res){
 	
 	var docummetID=req.body.checkbox;
+	var PageTitle=req.body.PageTitle
 
-	item.deleteOne({_id:docummetID},function(err){
-		if(!err)
-			console.log("successfully removed id");
-	
-			
-	})
-	res.redirect('/')
+			if(PageTitle=="Main"){		
 
+				item.deleteOne({_id:docummetID},function(err){
+						if(!err)
+							console.log("successfully removed id");
+					
+							
+					})
+					res.redirect('/') 
+		}
+			else{
+				listName.findOneAndUpdate({name:PageTitle},{$pull:{item:{_id:docummetID}}},function(err,result){
 
+						if(err){
+							console.log(err);
+						}
+						res.redirect('/'+PageTitle)
+
+					})
+				
+			}
 
 
 	
@@ -269,35 +294,35 @@ app.get('/about',function(req,res){
 
 app.get("/:customTodoList",function(req,res){
 	
-	 var reqListname=_.capitalize(req.params.customTodoList);
-	 console.log(reqListname)
-	 
-	 
-	if(reqListname!="Favicon.ico"){
-	 listName.findOne({name:reqListname},function(err,foundlist){
-		
-		if(!err){
-				if(!foundlist){
-				
-					var newList=new listName({
-						name:reqListname,
-						item:documetItem 		//collection of document
-					})
-					newList.save()
-						
-					res.redirect("/"+reqListname)
-			
-					}else{
-						res.render("todoList",{PageTitle:reqListname,Day:reqListname,newListitems:foundlist.item})						
-					}
-			}else 
-			console.log(err);
-				
-	 })
-	}else {
-		console.log("fuck i save my ass");
-		
-	}
+	var reqListname=_.capitalize(req.params.customTodoList);
+	console.log(reqListname)
+	
+	
+   if(reqListname!="Favicon.ico"){
+	listName.findOne({name:reqListname},function(err,foundlist){
+	   
+	   if(!err){
+			   if(!foundlist){
+			   
+				   var newList=new listName({
+					   name:reqListname,
+					   item:documetItem 		//collection of document
+				   })
+				   newList.save()
+					   
+				   res.redirect("/"+reqListname)
+		   
+				   }else{
+					   res.render("todoList",{PageTitle:reqListname,Day:reqListname,newListitems:foundlist.item})						
+				   }
+		   }else 
+		   console.log(err);
+			   
+	})
+   }else {
+	   console.log("fuck i save my ass");
+	   
+   }
 
 })
 

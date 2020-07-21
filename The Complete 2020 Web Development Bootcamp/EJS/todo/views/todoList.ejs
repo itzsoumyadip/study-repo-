@@ -6,10 +6,14 @@
 	
                 <div class="box" >
                     <% newListitems.forEach(function(item){ %>
-                     <form action="/delete" method="post">
+                  
+                                                                        <!-- data from database -->
+                        <form action="/delete" method="post">
                         <div class="item">
                         <input type="checkbox" name="checkbox" value="<%=item._id%>"   onchange="this.form.submit()">    
-                         <p><%= item.name %></p>
+                        <input type="hidden" name="PageTitle" value="<%= PageTitle %>" >
+                        <p><%= item.name %></p>
+                        
                         </div>    
                     </form>
                  
@@ -23,7 +27,9 @@
                             </div>    
                             <%}%>
  -->
-                    <form class="item" action="/"  method="post">
+      
+                                                                            <!-- new user enter data form -->
+                        <form class="item" action="/"  method="post">
        
                          <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
                    
