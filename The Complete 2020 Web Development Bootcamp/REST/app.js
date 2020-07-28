@@ -65,19 +65,104 @@ const article3=new ArticleModel({
 //article3.save()
 
 
-app.get('/articles',function(req,res){
-    
-    ArticleModel.find(function(err,articles){
 
-         res.send(articles)
+
+// app.get('/articles',function(req,res){
+    
+//     ArticleModel.find(function(err,articles){
+
+//          res.send(articles)
             
         
+//     })
+
+// })
+
+
+// post  
+
+
+
+// app.post('/articles',function(req,res){
+    
+//         console.log(req.body.title);
+//         console.log(req.body.content);
+
+
+//     const newArticle=new ArticleModel({
+
+//                     "title":req.body.title,
+//                     "content":req.body.content,
+
+//                 })
+//     newArticle.save(function(err){
+//         if(!err){
+//             res.send("sussesfull ")
+            
+//         }
+//     })
+        
+
+// })
+
+
+// delete  many 
+// app.delete('/articles',function(req,res){
+//                 ArticleModel.deleteMany(function(err){
+//                     if(!err){
+//                         console.log("sucessFully delete all article");
+                        
+//                     }
+//                 })
+// })
+
+
+
+
+
+/// express routing with chain mechanism
+
+app.route('/articles')
+   
+    .get(function(req,res){
+    
+          ArticleModel.find(function(err,articles){
+
+              res.send(articles)
+            
+        
+             })
+
+        })
+        .post(function(req,res){
+    
+            console.log(req.body.title);
+            console.log(req.body.content);
+    
+    
+        const newArticle=new ArticleModel({
+    
+                        "title":req.body.title,
+                        "content":req.body.content,
+    
+                    })
+        newArticle.save(function(err){
+            if(!err){
+                res.send("sussesfull ")
+                
+            }
+        })
+            
+    
     })
-
+    .delete(function(req,res){
+        ArticleModel.deleteMany(function(err){
+            if(!err){
+                console.log("successFully delete all article");
+                
+            }
+        })
 })
-
-
-
 
 
 
@@ -93,3 +178,6 @@ app.get('/articles',function(req,res){
     console.log("Server is up and running at 7007");
  
 })
+
+
+
