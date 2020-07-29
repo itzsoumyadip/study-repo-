@@ -148,7 +148,7 @@ app.route('/articles')
                     })
         newArticle.save(function(err){
             if(!err){
-                res.send("sussesfull ")
+                res.send("successfull ")
                 
             }
         })
@@ -163,6 +163,46 @@ app.route('/articles')
             }
         })
 })
+
+
+
+/////////////////// REQUESTING THE SPECIFIC ARTICLES////////////////////
+
+
+app.route('/articles/:articleSpecific')
+   .get(function(req,res){
+
+        ArticleModel.findOne({'title':req.params.articleSpecific},function(err,foundItem){
+           if(foundItem)
+                res.send(foundItem)
+           else
+                res.send("sorry no found articles on "+req.params.articleSpecific ) 
+        })
+
+   })
+
+   .put(function(req,res){
+       ArticleModel.update({'title':req.params.articleSpecific},
+       {
+            'title':req.body.title,
+            'content':req.body.content
+       },
+       function(err,item){
+            if(!err)
+                res.send(item)
+       })
+   })
+
+
+
+
+
+
+
+
+
+
+
 
 
 
