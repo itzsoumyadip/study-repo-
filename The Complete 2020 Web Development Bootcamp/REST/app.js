@@ -162,7 +162,7 @@ app.route('/articles')
                 
             }
         })
-})
+});
 
 
 
@@ -187,14 +187,44 @@ app.route('/articles/:articleSpecific')
             'title':req.body.title,
             'content':req.body.content
        },
+       {overwrite:true},
        function(err,item){
             if(!err)
                 res.send(item)
        })
    })
 
+   .patch(function(req,res){
+
+        ArticleModel.update(
+            {'title':req.params.articleSpecific},
+            
+                {$set:req.body},
+               
+                function(err){
+                    if(!err){
+                        res.send("successfully updated")
+                        
+                        
+                    }else{
+                        res.write("try again")
+                        res.send(err)
+                    }
+                }
+            
+            
+            )
+
+   })
 
 
+
+   .delete(function(req,res){
+       ArticleModel.deleteOne({title:req.params.articleSpecific},function(err){
+           if(!err)
+                res.send("Successfully deleted")
+       })
+   })
 
 
 
